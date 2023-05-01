@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Mulish', sans-serif;
+}
+
+.sr-only {
+  border: 0;
+	clip: rect(1px, 1px, 1px, 1px); 
+	-webkit-clip-path: inset(50%);
+		clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;  
+}
+
+header {
+  text-align: center;
+  padding: 0 0 9.3rem;
+}
+
+h1, h2 {
+  font-weight: 900;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  color: #B52184;
+}
+
+h1 {
+  margin: 1.7rem 0 .5rem;
+}
+
+header p {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.5rem;
+
+  color: #312D64;
+  margin-bottom: 3.5rem;
+}
+
+#header-button {
+  border: 4px solid #B52184;
+  border-radius: 760.109px;
+  background: transparent;
+  
+  padding: 3rem 1.4rem;
+
+  cursor: pointer;
+  transition: transform 350ms;
+}
+
+#header-button:hover {
+  transform: scale(1.05);
+}
+
+main {
+  background: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+  padding: 5.3rem 9.2rem;
+  display: grid;
+  gap: 5rem;
+}
+
+main div {
+  background: #FFFFFF;
+  box-shadow: 0px 3.31077px 13.2431px rgba(0, 0, 0, 0.25);
+  border-radius: 2rem;
+  padding: 2.6rem;
+}
+
+main div img {
+  margin-bottom: 3.3rem;
+}
+
+main div h2 {
+  margin-bottom: 1rem;
+}
+
+.contact {
+  padding: 7.8rem 4rem 6.5rem;
+}
+
+
+form {
+  display: grid;
+  gap: 2.4rem;
+  margin-top: 4.3rem;
+}
+
+
+form input, form textarea {
+  border: 1.5px solid #312D64;
+  border-radius: 16px;
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+
+  font-family: 'Mulish';
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 100%;
+  color: #312D64;
+}
+
+.name, .email {
+  display: grid;
+  position: relative;
+}
+
+#name, #email {
+  padding-left: 5rem;
+}
+
+form img {
+  position: absolute;
+  z-index: 1;
+  background:transparent;
+  top: 1.2rem;
+  left: 1.4rem;
+}
+
+#form-button {
+  background: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+  border-radius: 1.6rem;
+  padding: 1.6rem;
+  border: none;
+
+  width: 15rem;
+
+  font-family: 'Mulish';
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: white;
+
+  cursor: pointer;
+  transition: filter 300ms;
+}
+
+#form-button:hover {
+  filter: brightness(1.2);
+}
+
+footer {
+  background: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+  color: white;
+  text-align: center;
+  padding: 1.6rem;
+  font-weight: 600;
+  font-size: 1.9rem;
+}
+
+@media (max-width: 800px) {
+  #stars {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  header {
+    display: grid;
+    grid-template-areas:
+    'B A'
+    'C A';
+
+    justify-content: space-between;
+    padding: 0 10rem 10rem;
+  }
+
+  header img {
+    grid-area: A;
+    display: flex;
+    align-self: stretch;
+  }
+  
+  header .text {
+    grid-area: B;
+    text-align: left;
+    margin: 25rem 0 1.8rem;
+  }
+
+  #header-button {
+    grid-area: C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.9rem;
+    height: 10.5rem;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+
+  main div {
+    width: clamp(2rem, 36.6rem, 100%);
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 8rem;
+    position: relative;
+  }
+
+  #stars {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+  }
+
+  input {
+    background-color: white;
+  }
+
+  .form-wrapper {
+    margin-left: 7rem;
+    width: 59.5rem;
+  }
+}
